@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: my-app-1
+  name: my-app-3
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
@@ -11,6 +11,6 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: apps/frontend
-    repoURL: https://github.com/dinushchathurya/argocd-app-of-apps
+    path: argocd/my-apps/app-3
+    repoURL: https://github.com/dinushchathurya/argocd-app-of-apps.git
     targetRevision: HEAD
