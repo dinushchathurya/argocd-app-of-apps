@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app-of-apps
+spec: 
+  destination:
+    namespace: app-of-apps
+    server: 'https://kubernetes.default.svc'
+  source: 
+    path: argo-apps
+    repoURL: 'https://github.com/dinushchathurya/argocd-app-of-apps.git'
+    targetRevision: develop
+  project: app-of-apps
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
+    - PruneLast=true
