@@ -1,17 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: dev-backend
-  finalizers:
-  - resources-finalizer.argocd.argoproj.io
-spec:
+  name: app-of-apps
+spec: 
   destination:
-    server: https://kubernetes.default.svc
-  project: app-of-apps
-  source:
+    namespace: app-of-apps
+    server: 'https://kubernetes.default.svc'
+  source: 
     path: my-apps/backend/overlays/dev
-    repoURL: https://github.com/dinushchathurya/argocd-app-of-apps.git
+    repoURL: 'https://github.com/dinushchathurya/argocd-app-of-apps.git'
     targetRevision: develop
+  project: app-of-apps
   syncPolicy:
     automated:
       prune: true
