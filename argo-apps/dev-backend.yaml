@@ -1,10 +1,10 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: app-of-apps
+  name: dev-backend
 spec: 
   destination:
-    namespace: app-of-apps
+    namespace: dev-backend
     server: 'https://kubernetes.default.svc'
   source: 
     path: my-apps/backend/overlays/dev
