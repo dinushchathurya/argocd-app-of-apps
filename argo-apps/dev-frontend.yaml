@@ -6,7 +6,6 @@ metadata:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: frontend
     server: https://kubernetes.default.svc
   project: app-of-apps
   source:
