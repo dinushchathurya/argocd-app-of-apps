@@ -4,7 +4,7 @@ metadata:
   name: dev-backend
 spec: 
   destination:
-    namespace: dev-backend
+    namespace: backend
     server: 'https://kubernetes.default.svc'
   source: 
     path: my-apps/backend/overlays/dev
