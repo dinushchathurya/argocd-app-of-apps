@@ -2,15 +2,15 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: frontend
-  namespace: argocd
+  namespace: frontend
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: argocd
+    namespace: frontend
     server: https://kubernetes.default.svc
-  project: default
+  project: app-of-apps
   source:
-    path: my-apps/frontend
+    path: my-apps/frontend/overlays/dev
     repoURL: https://github.com/dinushchathurya/argocd-app-of-apps.git
     targetRevision: develop
