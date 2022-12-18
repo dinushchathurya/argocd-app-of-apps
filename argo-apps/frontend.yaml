@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: dev-frontend
+spec: 
+  destination:
+    namespace: frontend
+    server: 'https://kubernetes.default.svc'
+  source: 
+    path: my-apps/frontend
+    repoURL: 'https://github.com/dinushchathurya/argocd-app-of-apps.git'
+    targetRevision: develop
+  project: app-of-apps
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
+    - PruneLast=true
