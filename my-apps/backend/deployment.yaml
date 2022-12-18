@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: knote
+  name: frontend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: knote
+      app: frontend
   template:
     metadata:
       labels:
-        app: knote
+        app: frontend
     spec:
       containers:
         - name: app

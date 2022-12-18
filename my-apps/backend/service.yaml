@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: knote
+  name: backend
 spec:
   selector:
-    app: knote
+    app: backend
   ports:
     - protocol: TCP
       port: 80
       targetPort: 3000
-      nodePort: 30000
+      nodePort: 30001
   type: NodePort
