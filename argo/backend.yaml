@@ -7,10 +7,10 @@ metadata:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: argocd
+    namespace: dev
     server: https://kubernetes.default.svc
-  project: default
+  project: app-of-apps
   source:
-    path: my-apps/backend
+    path: my-apps/backend/overlays/dev
     repoURL: https://github.com/dinushchathurya/argocd-app-of-apps.git
     targetRevision: develop
