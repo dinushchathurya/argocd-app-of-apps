@@ -14,3 +14,10 @@ spec:
     path: my-apps/frontend/overlays/dev
     repoURL: https://github.com/dinushchathurya/argocd-app-of-apps.git
     targetRevision: develop
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
+    - PruneLast=true
