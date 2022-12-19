@@ -1,0 +1,9 @@
+namePrefix: dev-
+namespace: dev
+bases:
+  - ../../base
+imageTags:
+  - name: limarktest/nodejs-docker
+    newTag: v192
+patchesStrategicMerge:
+  - deployment-patch.yaml
