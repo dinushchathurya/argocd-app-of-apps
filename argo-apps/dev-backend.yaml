@@ -7,7 +7,7 @@ spec:
     namespace: backend
     server: 'https://kubernetes.default.svc'
   source: 
-    path: my-apps/backend/overlays/dev
+    path: my-apps/backend
     repoURL: 'https://github.com/dinushchathurya/argocd-app-of-apps.git'
     targetRevision: develop
   project: app-of-apps
