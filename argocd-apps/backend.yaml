@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: dev-backend
+  name: backend
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
