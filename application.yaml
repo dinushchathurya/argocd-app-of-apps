@@ -4,7 +4,7 @@ metadata:
   name: demo-app-of-apps
 spec:
   destination:
-    namespace: default
+    namespace: app-of-apps
     server: 'https://kubernetes.default.svc'
   source:
     path: argocd-apps
