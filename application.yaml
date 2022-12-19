@@ -10,8 +10,11 @@ spec:
     path: argocd-apps
     repoURL: 'https://github.com/dinushchathurya/argocd-app-of-apps.git'
     targetRevision: develop
-  project: default
+  project: app-of-apps
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
+    - PruneLast=true
