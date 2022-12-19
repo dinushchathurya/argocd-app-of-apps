@@ -13,4 +13,4 @@ spec:
   source:
     path: my-apps/frontend
     repoURL: https://github.com/dinushchathurya/argocd-app-of-apps.git
-    targetRevision: HEAD
+    targetRevision: develop
