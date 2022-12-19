@@ -1,12 +1,12 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: frontend
+  name: backend
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: dev-frontend
+    namespace: dev-backend
     server: https://kubernetes.default.svc
   project: app-of-apps
   source:
