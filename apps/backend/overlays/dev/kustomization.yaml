@@ -1,5 +1,5 @@
 namePrefix: dev-
-namespace: dev
+namespace: dev-backend
 bases:
   - ../../base
 imageTags:

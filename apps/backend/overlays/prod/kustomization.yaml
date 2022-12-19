@@ -1,5 +1,5 @@
 namePrefix: prod-
-namespace: prod
+namespace: prod-backend
 bases:
   - ../../base
 imageTags:
